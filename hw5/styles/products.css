@@ -1,0 +1,11 @@
+.products {
+  background-color: #eee;
+  display: flex;
+}
+.products .price {
+  font-weight: bold;
+}
+
+.products > section {
+  padding: 10px;
+}

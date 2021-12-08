@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Men's shop</title>
+</head>
+
+<body>
+  <header>
+    <button>Додатково</button>
+    <article>
+      <img src='img/icon.png' width='100' height='50' />
+    </article>
+    <article>
+      <input type='search' />
+      <button>Знайти</button>
+    </article>
+    <article>
+      <button>Корзина</button>
+    </article>
+  </header>
+  <main>
+    <div class="container">
+      <form class="frm" action="register.php" method="GET">
+        <fieldset>
+          <legend>Особиста інформація</legend>
+          <div>
+            <label for="login">П.І.Б.</label>
+            <input name="lgn" id="login" type="text" placeholder="П.І.Б." minlength="3" maxlength="35">
+          </div>
+          <div>
+            <label for="birth">Дата народження:</label>
+            <input type="date" id="birth" name="birth" value="2021-10-01" min="1940-01-01" max="2021-10-01">
+          </div>
+          <div>
+            <label for="file">Добавте фото</label>
+            <input name="file" id="file" type="file">
+          </div>
+          <div>
+            <label for="email">Адрес пошти</label>
+            <input name="email" type="email" placeholder="email" id="email">
+          </div>
+          <div>
+            <label for="password">Пароль</label>
+            <input name="psw" id="password" type="password" placeholder="Пароль" minlength="4" maxlength="8">
+          </div>
+          <div>
+            <label for="url">Адреса сайта</label>
+            <input id="url" name="url" type="url" value="http://mysite.name">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Выбрати стать:</legend>
+          <div>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Чоловік</label>
+          </div>
+          <div>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Жінка</label>
+          </div>
+        </fieldset>
+
+
+
+        <fieldset>
+          <legend>Про себе</legend>
+          <div>
+            <label for="txt">Про себе</label>
+            <textarea class="text" placeholder="про себе..." name="txt" id="txt" cols="30" rows="10"></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Кнопки</legend>
+          <div>
+            <button type="submit">Реєстрація</button>
+            <button type="reset">Очистити</button>
+          </div>
+        </fieldset>
+
+      </form>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
