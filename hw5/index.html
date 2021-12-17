@@ -3,6 +3,7 @@
 
 <head>
   <title>Men's shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="styles/theme.css">
   <link rel="stylesheet" href="styles/products.css">
@@ -20,8 +21,8 @@
 
     <article class="main-panel">
       <article class="search-bar">
-        <input type='search' />
-        <button class="btn-primary">Знайти</button>
+        <input type='search' placeholder="Введіть назву товару" />
+        <button class="btn-primary_find">Знайти</button>
       </article>
 
     </article>
@@ -42,15 +43,15 @@
     </aside>
     <section id="filters">
       <ul>
-        <li>Футболки</li>
-        <li>Штани</li>
+        <li> <a>Футболки</a> </li>
+        <li><a>Штани</a></li>
       </ul>
 
     </section>
     <section id="products">
-      <article class="products">
+      <article class="products" role="button">
         <section class="preview">
-          <img src="https://picsum.photos/100/100" width="100" height="100">
+          <img class="preview-img" src="https://picsum.photos/100/100" width="100" height="100">
         </section>
         <section class="details">
           <p class="type">Тип</p>
@@ -64,14 +65,17 @@
           <button class="btn-primary">Замовити</button>
           <p class="price">555 грн</p>
         </section>
+
       </article>
     </section>
+
   </main>
   <footer>
     <ul>
       <li><a href="about.html">Про Нас</a></li>
       <li><a href="help.html">Підтримка</a></li>
     </ul>
+    <p>© Nazarii Kitsaniuk</p>
   </footer>
 </body>
 
