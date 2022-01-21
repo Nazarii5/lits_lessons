@@ -45,16 +45,17 @@ divEle.classList.add("some");
 
 const someTextNode = document.createTextNode(
   
-  ` country1 = {
-  name: "Ukraine",
+  ` country:
+  name: "Ukraine", 
   language: "українська",
   properties: 1503,
   population: 126560,
   region: "Europe"
-}
+
 
  `);
 divEle.appendChild(someTextNode);
+
 
 someMain.appendChild(divEle)
 
