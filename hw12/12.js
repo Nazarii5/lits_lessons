@@ -91,13 +91,5 @@ console.log('---------Push_Pop----------');
 countries.pop();
 console.log(countries);
 
-countries.push(
-  {
-    name: "China",
-    language: "Chines",
-    properties: 24441,
-    population: "13342342345 people",
-    region:"Asia"
-  }
-);
+countries.push(country4);
 console.log(countries);
