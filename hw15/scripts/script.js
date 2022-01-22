@@ -65,7 +65,7 @@ someMain.appendChild(divEle)
 console.log("-------inner_HTML--------")
 
 someMain.innerHTML = someMain.innerHTML + `<pre class="border">
-<pre >
+<p >
 Country:
     name: "Ukraine"
     language: "українська"
@@ -73,33 +73,33 @@ Country:
     population: 126560
     region: "Europe"
   
-    </pre>` + `<pre>
+    </p>` + `<p>
     country:
       name: "UK",
       language: "English",
       properties: 123,
       population: "55634534 people",
       region: "Asia"
-      </pre>` +
+      </p>` +
     
     
-  `<pre>
+  `<p>
     country:
       name: "Spain",
       language: "Spanish",
       properties: 234,
       population: "34534 people",
       region: "Europe"
-    </pre>` +
+    </p>` +
     
-  `<pre>
+  `<p>
     country:
       name: "China",
       language: "Chines",
       properties: 24441,
       population: "13342342345 people",
       region:"Asia"
-    </pre>
+    </p>
     </pre>`;
   
 const someBorder = document.querySelector(".border");
@@ -108,5 +108,5 @@ someBorder.style.display = "flex";
 someBorder.style.border = "2px solid green";
 someBorder.style.background = "yellow";
 someBorder.style.padding="3px" ;
-
+someBorder.style.fontFamily = "sans-serif";
 
