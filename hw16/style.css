@@ -1,0 +1,21 @@
+header {
+}
+button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button.btn-primary {
+  background-color: lightcoral;
+  color: white;
+}
+button.btn-primary:hover {
+  background-color: coral;
+  color: white;
+}
+button.btn-secondary {
+}
