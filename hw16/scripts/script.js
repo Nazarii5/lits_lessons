@@ -86,11 +86,21 @@ makeFiltersHandlers();
 const searchInput = document.querySelector("#main-search");
 searchInput.addEventListener('input', function (event) {
   showProducts(
-    productsList.filter((product) =>
-    {
+    productsList.filter((product) => {
       return (
         product.type.toLowerCase().includes(event.target.value.toLowerCase())
       )
     })
   )
-} )
+});
+
+
+const toggleElement = document.querySelector("#sidebar-toggle");
+const sidebarPanel = document.querySelector("#sidepanel");
+toggleElement.addEventListener("click", (event) => {
+  if (sidebarPanel.classList.contains("aside-opened")) {
+    sidebarPanel.classList.remove("aside-opened");
+  } else {
+    sidebarPanel.classList.add("aside-opened");
+  }
+});
