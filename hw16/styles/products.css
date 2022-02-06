@@ -6,12 +6,21 @@
 .products:hover {
   background-color: rgb(219, 214, 214);
 }
+.products:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.products > section {
+  padding: 10px;
+}
+
 .products .price {
   font-weight: bold;
 }
 .products .details {
   border-left: 1px solid #dcdcdc;
   border-right: 1px solid #dcdcdc;
+  flex-grow: 1;
 }
 
 .products > section {
@@ -32,7 +41,7 @@
   .products .preview {
     order: 1;
   }
-  .products .action {
+  .products.action {
     order: 2;
     display: flex;
     justify-content: end;
@@ -59,4 +68,5 @@
 }
 #products {
   padding: 10px;
+  width: 100%;
 }

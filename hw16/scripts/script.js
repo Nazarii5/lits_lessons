@@ -1,11 +1,23 @@
 var productsList = [
   // in future will be given from server
-  { type: " Футболка" },
-  { type: "Сорочка" },
-  { type: "Штани" },
+  { price: "600 uah",
+    type: "Футболка",
+    details: "Comfortable",
+    size:"Розмір: S,M,L"
+  },
+  {price: "550 uah",
+    type: "Футболка",
+    details: "Looks good",
+    size:"Розмір: M,L,XL"
+  },
+  {price: "800 uah",
+    type: "Штани",
+    details: "top of Fashion",
+    size:"Розмір: L,XL,2XL"
+  },
 ];
 
-function showProducts() {
+function showProducts(productsList) {
 
   const productsContainer = document.querySelector("#products");
 
@@ -13,10 +25,11 @@ function showProducts() {
     alert("wow, smth is wrong!!!");
     return
 
-}
+  }
+  productsContainer.innerHTML = ``;
   
   for (let i = 0; i < productsList.length; i++) {
-    //const productNode = document.createElement("article");
+    const product = productsList[i];
     const productNode = document.createElement('article');
     productNode.innerHTML = `
     <section class="preview">
@@ -24,15 +37,12 @@ function showProducts() {
         </section>
         <section class="details">
           <p class="type">Тип</p>
-          <p class="size">Розмір</p>
-          <p class="info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto debitis natus ipsam minima
-            perferendis harum dolores alias provident pariatur aperiam ea necessitatibus obcaecati veniam impedit
-            laborum ipsa sequi, aliquid nesciunt?
-          </p>
+          <p class="size">${product.size}</p>
+          <p class="info">${product.details}
         </section>
         <section class="actoin">
           <button class="btn-primary">Замовити</button>
-          <p class="price">555 грн</p>
+          <p class="price">${product.price}</p>
         </section>
 `;
 
@@ -53,4 +63,34 @@ function showProducts() {
 }
 };
 
-showProducts();
+showProducts(productsList);
+
+
+function makeFiltersHandlers() {
+  const filterNodes = document.querySelectorAll(".filter-item");
+  for (let i = 0; i < filterNodes.length; i++) {
+    filterNodes[i].addEventListener("click", function (event) {
+      // event JSON
+      const targetEle = event.target;
+      const filterValue = targetEle.getAttribute("filter-value");
+      showProducts(
+        productsList.filter((product) => product.type === filterValue)
+      );
+    });
+  }
+}
+makeFiltersHandlers();
+
+
+
+const searchInput = document.querySelector("#main-search");
+searchInput.addEventListener('input', function (event) {
+  showProducts(
+    productsList.filter((product) =>
+    {
+      return (
+        product.type.toLowerCase().includes(event.target.value.toLowerCase())
+      )
+    })
+  )
+} )
